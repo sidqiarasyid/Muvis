@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Project PTS XI</string>
+    <string name="action">Action</string>
+    <string name="comedy">Comedy</string>
+    <string name="home_nav_title">Home</string>
+    <string name="movie_nav_title">Movie</string>
+    <string name="fav_nav_title">Favorites</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="item_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur.
+
+</string>
+    <string name="release">release date</string>
+    <string name="thriller">Thriller</string>
+    <string name="oveview">An off-duty SAS soldier, Tom Buckingham, must thwart a terror attack on a train running through the Channel Tunnel. As the action escalates on the train, events transpire in the corridors of power that may make the difference as to whether Buckingham and the civilian passengers make it out of the tunnel alive.</string>
+    <string name="fav_cmnd">Add to Favorites</string>
+</resources>
