@@ -3,8 +3,8 @@
 
     <item
         android:id="@+id/movie"
-        android:icon="@drawable/film"
-        android:title="@string/movie_nav_title"/>
+        android:icon="@drawable/ic_baseline_sports_basketball_24"
+        android:title="Sports"/>
     <item
         android:id="@+id/fav"
         android:icon="@drawable/fav"

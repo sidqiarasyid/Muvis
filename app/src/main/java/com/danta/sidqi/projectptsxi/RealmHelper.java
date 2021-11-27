@@ -17,7 +17,7 @@ public class RealmHelper {
     }
 
     public static void save(final Model model){
-        Realm.getDefaultInstance().executeTransaction(new Realm.Transaction() {
+        Realm.getDefaultInstance().executeTransactionAsync(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
                 if (realm != null){

@@ -57,13 +57,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
                 .load(movieList.get(position).getPoster_path())
                 .placeholder(R.drawable.posttteerrr)
                 .error(R.drawable.posttteerrr)
-                .resize(140, 190)
                 .into(holder.img);
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent pass = new Intent(view.getContext(), DetailActivity.class);
                 pass.putExtra("title", model.getOriginal_title());
+                pass.putExtra("image", model.getPoster_path());
                 pass.putExtra("overview", model.getOverview());
                 pass.putExtra("date", model.getRelease_date());
                 view.getContext().startActivity(pass);

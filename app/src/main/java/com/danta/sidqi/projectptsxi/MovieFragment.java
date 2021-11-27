@@ -34,7 +34,7 @@ public class MovieFragment extends Fragment {
 
 
 
-    String URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=e55786ef81c26b11b4be4f20c9c4282d&language=en-US&page=1";
+    String URL = "https://www.thesportsdb.com/api/v1/json/2/all_sports.php";
 
 
 
@@ -72,13 +72,13 @@ public class MovieFragment extends Fragment {
             public void onResponse(JSONObject response) {
                 try {
 
-                    JSONArray result = response.getJSONArray("results");
+                    JSONArray result = response.getJSONArray("sports");
                     for (int i = 0; i < result.length(); i++){
                         JSONObject object = result.getJSONObject(i);
-                        String original_title = object.getString("original_title");
-                        String overview = object.getString("overview");
-                        String poster_path = object.getString("backdrop_path");
-                        String release_date = object.getString("release_date");
+                        String original_title = object.getString("strSport");
+                        String overview = object.getString("strSportDescription");
+                        String poster_path = object.getString("strSportThumb");
+                        String release_date = object.getString("strFormat");
                         movieList.add(new Model(original_title, overview, poster_path, release_date));
 
                     }

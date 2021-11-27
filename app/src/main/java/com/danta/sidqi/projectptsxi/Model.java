@@ -10,6 +10,10 @@ public class Model extends RealmObject{
     private String poster_path;
     private String release_date;
 
+    public Model(){
+
+    }
+
 
     public Model(String original_title, String overview, String poster_path, String release_date){
         this.original_title = original_title;
@@ -17,8 +21,9 @@ public class Model extends RealmObject{
         this.poster_path = poster_path;
         this.release_date = release_date;
     }
-    public Model(String original_title, String overview, String release_date){
+    public Model(String original_title,String poster_path, String release_date, String overview, Boolean ngisi){
         this.original_title = original_title;
+        this.poster_path = poster_path;
         this.overview = overview;
         this.release_date = release_date;
     }

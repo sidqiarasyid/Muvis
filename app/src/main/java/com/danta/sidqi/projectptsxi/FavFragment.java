@@ -18,8 +18,8 @@ import java.util.List;
 
 public class FavFragment extends Fragment {
     RecyclerView rv_fav;
-    ArrayList<Model> favList;
-    MovieAdapter favAdapter;
+    List<Model> favList;
+    FavAdapter favAdapter;
 
     Realm realm;
     RealmHelper helper;
@@ -41,15 +41,18 @@ public class FavFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_fav, container, false);
         favList = new ArrayList<>();
         rv_fav = view.findViewById(R.id.rvfavorite);
-        RecyclerView.LayoutManager manager = new LinearLayoutManager(getActivity());
-        rv_fav.setLayoutManager(manager);
-        favAdapter = new MovieAdapter(favList);
-        rv_fav.setAdapter(favAdapter);
-        RealmConfiguration config = new RealmConfiguration.Builder().build();
-        realm = Realm.getInstance(config);
+        Realm.init(view.getContext());
+        RealmConfiguration configuration = new RealmConfiguration.Builder().build();
+        realm = Realm.getInstance(configuration);
 
         helper = new RealmHelper(realm);
         favList = helper.getAllModel();
+
+        favAdapter = new FavAdapter(favList);
+        RecyclerView.LayoutManager rvmanager = new LinearLayoutManager(getActivity());
+
+        rv_fav.setAdapter(favAdapter);
+        rv_fav.setLayoutManager(rvmanager);
 
 
 
